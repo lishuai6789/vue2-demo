@@ -1,0 +1,36 @@
+@keyframes load {
+  50% {
+    transform: rotatez(180deg) scale(1.5);
+    border-style: dotted;
+  }
+
+  100% {
+    transform: rotatez(360deg) scale(0.9);
+  }
+}
+
+.el-loading-spinner .circular {
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+
+.el-loading-spinner {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.el-loading-spinner::before {
+  content: "";
+  color: white;
+  height: 8px;
+  width: 8px;
+  background: transparent;
+  border-radius: 50%;
+  border: 4px solid blue;
+  border-color: #394F79 #205CB7;
+  animation: load 2s infinite;
+}
